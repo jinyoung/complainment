@@ -1,0 +1,67 @@
+version: "3"
+
+services:
+
+  generate-민원접수:
+    tty: true
+    stdin_open: true
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+#    command: ["-sh"]
+    volumes:
+      - ../민원접수:/project
+  generate-민원유형1:
+    tty: true
+    stdin_open: true
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+#    command: ["-sh"]
+    volumes:
+      - ../민원유형1:/project
+  generate-민원유형2:
+    tty: true
+    stdin_open: true
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+#    command: ["-sh"]
+    volumes:
+      - ../민원유형2:/project
+  generate-민원1분석:
+    tty: true
+    stdin_open: true
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+#    command: ["-sh"]
+    volumes:
+      - ../민원1분석:/project
+  generate-기타:
+    tty: true
+    stdin_open: true
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+#    command: ["-sh"]
+    volumes:
+      - ../기타:/project
+  generate-보상처리:
+    tty: true
+    stdin_open: true
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+#    command: ["-sh"]
+    volumes:
+      - ../보상처리:/project
+  generate-민원2분석:
+    tty: true
+    stdin_open: true
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+#    command: ["-sh"]
+    volumes:
+      - ../민원2분석:/project
